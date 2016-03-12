@@ -1,1 +1,12 @@
-/* CSS declarations go here */
+.ion-skip-backward{
+ font-size: 30px;
+}
+.ion-skip-forward{
+    font-size: 30px;
+}
+.ion-play{
+    font-size: 30px;
+}
+.ion-stop{
+    font-size: 30px;
+}

@@ -17,11 +17,11 @@ Router.configure({
 });
 
 Router.map(function() {
-    this.route('contacts', {
+    this.route('songs', {
         path: '/'
     });
 
-    this.route('contacts.show', {
-        path: '/contacts/:_id'
+    this.route('songs.show', {
+        path: '/songs/:_id'
     });
 })

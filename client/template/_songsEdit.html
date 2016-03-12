@@ -1,11 +1,11 @@
 
-<template name="_contactsEdit">
+<template name="_songsEdit">
     {{#ionModal customTemplate=true}}
-        {{#autoForm collection="App.Collection.Contacts" doc=contact id="contacts-edit-form" type="update"}}
-            <div class="bar bar-header bar-stable">
+        {{#autoForm collection="App.Collection.Songs" doc=song id="songs-edit-form" type="update"}}
+            <div class="bar bar-header bar-stable bar-positive">
                 <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
-                <h2 class="title">Edit Contact</h2>
-                <button type="submit" class="button button-positive button-clear">Save</button>
+                <h2 class="title">Edit Songs</h2>
+                <button type="submit" class="button button-clear">Save</button>
             </div>
             <div class="content has-header overflow-scroll">
                 {{> afQuickFields omitFields="avatarUrl"}}

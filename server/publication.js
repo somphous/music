@@ -1,9 +1,9 @@
-Meteor.publish('contacts', function () {
+Meteor.publish('songs', function () {
     Meteor._sleepForMs(1000);
-    return App.Collection.Contacts.find();
+    return App.Collection.Songs.find();
 });
 
-Meteor.publish('contact', function (_id) {
+Meteor.publish('song', function (_id) {
     Meteor._sleepForMs(1000);
-    return App.Collection.Contacts.find({_id: _id});
+    return App.Collection.Songs.find({_id: _id});
 });

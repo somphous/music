@@ -1,0 +1,56 @@
+<template name="songsShow">
+    {{#contentFor "headerButtonLeft"}}
+        {{>ionNavBackButton path="songs" text="Songs"}}
+    {{/contentFor}}
+
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Song</h1>
+    {{/contentFor}}
+
+    {{#contentFor "headerButtonRight"}}
+        <button class="button button-clear" data-ion-modal="_songsEdit" data-id="{{song._id}}">Edit</button>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionContent class="padding song-detail"}}
+            {{#with song}}
+                <div class="list card">
+                    <div class="item item-image">
+                        <img src="/closer-manith.jpg">
+                    </div>
+                    <!--<button  data-action="showConfirm">Delete</button>-->
+                    <div class="text-center">
+                        {{name}} <br>
+                        {{singer}}
+                    </div>
+
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+
+                        <a class="music tab-item backward">
+                            <i class="ion-skip-backward"></i>
+                        </a>
+
+                        <div class="list">
+                            <a class="music tab-item play">
+                                <i class="change-icon icon ion-play"></i>
+                            </a>
+                            <a class="tab-item stop" href="#">
+                                <i class=" change-icon icon ion-stop"></i>
+                            </a>
+                        </div>
+
+                        <a class="tab-item forward">
+                            <i class="ion-skip-forward"></i>
+                        </a>
+
+                    </div>
+                    <div class="item range range-positive">
+                        <i class="icon ion-volume-low"></i>
+                        <input type="range" name="volume" min="0" max="{{volume}}" value="{{volume}}">
+                        <i class="icon ion-volume-high"></i>
+                    </div>
+                </div>
+            {{/with}}
+        {{/ionContent}}
+    {{/ionView}}
+</template>

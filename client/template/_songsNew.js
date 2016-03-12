@@ -1,8 +1,8 @@
 AutoForm.hooks({
-    'contacts-new-form': {
+    'songs-new-form': {
         onSuccess: function (operation, result, template) {
             IonModal.close();
-            Router.go('contacts.show', {_id: result});
+            Router.go('songs.show', {_id: result});
         },
 
         onError: function(operation, error, template) {

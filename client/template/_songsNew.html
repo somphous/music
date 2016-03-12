@@ -1,0 +1,18 @@
+<template name="_songsNew">
+    {{#ionModal customTemplate=true}}
+        {{#autoForm collection="App.Collection.Songs" id="songs-new-form" type="insert"}}
+            <div class="bar bar-header bar-stable bar-positive">
+                <button data-dismiss="modal" type="button" class="button button-clear">Cancel</button>
+                <h2 class="title">Edit Song</h2>
+                <button type="submit" class="button button-clear">Add</button>
+            </div>
+            <div class="content has-header overflow-scroll">
+                {{> afQuickFields omitFields="avatarUrl,details.active"}}
+                {{> afQuickFields name="url" }}
+                {{> afQuickFields name="type" }}
+                {{> afQuickFields name="artist" }}
+                {{> afQuickFields name="singer" }}
+            </div>
+        {{/autoForm}}
+    {{/ionModal}}
+</template>
